@@ -1,0 +1,119 @@
+/* how it works section start */
+
+.how-it-works-section {
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+}
+
+.how-mensahe-works-video-container {
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-mensahe-works-video {
+    display: block;
+    margin-top: 2.5rem
+  }
+
+/* benefits  start*/
+.benefits-container {
+    padding: 2rem;
+    margin: 0 1.25rem;
+}
+
+.benefits-question-text {
+    background-color: hsl(226, 100%, 75%);
+    padding: 1.5rem;
+
+    font-size: 1.5rem;
+    margin: 0 0 1.25rem;
+
+    box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -moz-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -ms-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -o-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+}
+
+.benefits-product-list {
+    list-style-type: none;
+    background-color: hsl(50, 100%, 70%);
+    padding: 0;
+
+    margin: 0 0 1.25rem;
+
+    box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -moz-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -ms-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -o-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+}
+
+.benefits-product-list-text {
+    padding: 1rem;
+}
+
+.benefits-service-list {
+    background-color: hsl(359, 100%, 70%);
+    padding: 0;
+    margin: 0 0 1.25rem;
+
+    box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -moz-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -ms-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -o-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+}
+
+.benefits-service-list-text {
+    padding: 1rem;
+}
+
+.benefits-product-list-text,
+.benefits-service-list-text {
+    margin: 0 0 0.625rem;
+}
+
+/* benefits end */
+
+/* customer stories start */
+.customer-stories-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: solid 0.1rem hsl(0, 0%, 0%);
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+
+    padding: 2rem;
+}
+
+
+.customer-stories-text {
+    display: inline-block;
+    font-size: 1.25rem;
+    color: hsl(0, 0%, 0%);
+    animation: slide-text 20s linear infinite;
+    -webkit-animation: slide-text 20s linear infinite;
+}
+
+@keyframes slide-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .customer-stories-container {
+        width: 100%;
+    }
+    .customer-stories-text {
+        font-size: 0.875rem;
+    }
+}
+/* customer stories end */
+
+/* how it works section end */

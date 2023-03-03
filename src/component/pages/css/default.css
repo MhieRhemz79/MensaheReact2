@@ -1,0 +1,19 @@
+*{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: 'Comfortaa', cursive;
+}
+
+::selection {
+    background: hsl(359, 100%, 70%); /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: hsl(359, 100%, 70%); /* Gecko Browsers */
+}
+
+[data-img="render"] {
+    image-rendering: -webkit-optimize-contrast;
+
+}

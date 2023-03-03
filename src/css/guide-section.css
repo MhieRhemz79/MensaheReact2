@@ -1,0 +1,153 @@
+/* guide section start */
+
+/* guide title start */
+.guide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.guide-title {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .guide-container {
+        margin: auto;
+    }
+
+    .guide-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .guide-container {
+        margin: 0 auto;
+    }
+
+    .guide-title {
+        text-align: center;
+    }
+}
+/* guide title end */
+
+/* who and what guide start */
+.who-and-what-guide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+}
+
+.who-guide-container {
+    background-color: hsl(226, 100%, 75%);
+}
+
+.what-guide-container {
+    background-color: hsl(359, 100%, 70%);
+}
+
+.who-guide-container, 
+.what-guide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 12.5rem;
+    width: 18.75rem;
+    padding: 1.25rem;
+    margin: 1rem;
+    border: solid 0.1rem hsl(0, 0%, 0%);
+    box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -moz-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -ms-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -o-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+}
+
+.who-text-question,
+.who-generate-text-answer-button,
+.who-text-answer-output,
+.what-text-question,
+.what-generate-text-answer-button,
+.what-text-answer-output {
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .who-and-what-guide-container {
+        flex-direction: column;
+    }
+
+    .who-guide-container, .what-guide-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.who-generate-text-answer-button,
+.what-generate-text-answer-button {
+    background-color: hsl(50, 100%, 70%);
+    border: solid 0.1rem hsl(0, 0%, 0%);
+    transition: transform 0.2s;
+}
+
+.who-generate-text-answer-button:active,
+.what-generate-text-answer-button:active {
+    transform: translateY(-2px);
+}
+
+.who-text-answer-output,
+.what-text-answer-output {
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+}
+/* who and what guide end */
+
+/* demos start */
+.demos-container {
+    padding: 2rem;
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+}
+.demos-title {
+    text-align: center;
+}
+
+.demos-list {
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+}
+
+@media (max-width: 768px) {
+    .demos-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.demos-list-buttons {
+    margin: 1rem;
+}
+
+.demos-buttons {
+    background-color: hsl(226, 100%, 75%);
+    border: solid 0.1rem hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 0%);
+    padding: 2rem;
+
+    box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -moz-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -ms-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -o-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+}

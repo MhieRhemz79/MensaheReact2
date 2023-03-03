@@ -1,0 +1,21 @@
+/* footer start */
+
+.footer {
+    padding: 2rem;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.footer-email-address {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-email-address:hover {
+    color: hsl(359, 100%, 70%);
+}
+
+/* footer end */

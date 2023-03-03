@@ -1,0 +1,100 @@
+/* navigation bar start */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: solid 0.1rem hsl(0, 0%, 0%);
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.mensahe-logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 0.625rem;
+}
+
+.nav-item-text {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+
+.nav-item-text:hover,
+.nav-item-text:active {
+    text-decoration: underline;
+}
+
+/* call to action button start free */
+.cta-button {
+    display: block;
+    width: 8rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: hsl(359, 100%, 70%);
+    color:  hsl(0, 0%, 0%);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.0625rem;
+    text-align: center;
+    line-height: 3.125rem;
+    box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -webkit-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -moz-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -ms-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    -o-box-shadow: 0.1875rem 0.1875rem 0rem 0.0625rem hsl(0, 0%, 0%);
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.cta-button:hover {
+    background-color: hsl(359, 100%, 70%);
+    color:  hsl(0, 0%, 100%);
+}
+
+.cta-button:active {
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+    box-shadow: 0.125rem 0.125rem 0rem 0rem hsl(0, 0%, 0%);
+}
+
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* navigation bar end */
