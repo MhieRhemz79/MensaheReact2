@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/introduction-section.css'
+import { Link } from 'react-router-dom'
 
 const introduction = () => {
   return (
@@ -17,13 +18,11 @@ const introduction = () => {
                 <button type="button" 
                         className="cta-button"
                         onclick="window.open('https://cutt.ly/mensahe-form')">
-                        start free
+                        <Link to="/sign_in" className="nav-item-text">Sign In</Link>
                 </button>
             </div>
         </section>
         {/* <!-- introduction section end --> */}
-
-
 
     </div>
   )

@@ -12,9 +12,6 @@ const howitworks = () => {
         {/* <!-- how it works section start --> */}
         <section id="how-it-works-section">
           
-          
-
-
             {/* <!-- benefits of mensahe --> */}
             <div className="benefits-container">
                 <h2 className="benefits-question-text">what benefits does our product and service offer?</h2>

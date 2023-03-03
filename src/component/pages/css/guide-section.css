@@ -40,7 +40,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     border-bottom: solid 0.1rem hsl(0, 0%, 0%);
 }
 
@@ -59,7 +58,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 12.5rem;
+    height: 14rem;
     width: 18.75rem;
     padding: 1.25rem;
     margin: 1rem;
@@ -78,7 +77,7 @@
 .what-generate-text-answer-button,
 .what-text-answer-output {
     line-height: 1.5;
-    padding: 0.5rem;
+    padding: 0.2rem;
 }
 
 @media (max-width: 600px) {

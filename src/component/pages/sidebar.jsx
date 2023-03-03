@@ -44,10 +44,10 @@ export default function Sidebar() {
     history("/sign_in");
   };
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    Birthday();
-  }, []);
+  // // eslint-disable-next-line react-hooks/rules-of-hooks
+  // useEffect(() => {
+  //   Birthday();
+  // }, []);
 
   // const [open, setOpen] = React.useState(false);
 
@@ -99,6 +99,7 @@ export default function Sidebar() {
             </ListItem>
           ))}
         </List>
+        
         <Divider />
 
         <List>
@@ -115,16 +116,12 @@ export default function Sidebar() {
         </List>
 
         <List>
-          {["Sign Out"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItemButton onClick={userlogout}>
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary="Sign Out" />
+          </ListItemButton>
         </List>
       </Drawer>
 

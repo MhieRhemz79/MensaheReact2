@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Navbar from '../pages/navbar';
 import Footer from '../pages/footer';
+import '../pages/css/signUpInPage.css'
 
 const sign_in = () => {
 
@@ -80,18 +81,18 @@ const sign_in = () => {
   return (
     <>
         <Navbar />  
-        <div className="container mt-3">
-            <section className="d-flex justify-content-between">
+        <div className="container mt-3" id='signUpInPage'>
+            <section className="d-flex justify-content-between pt-5 mt-5">
                 <div className="left_data mt-3 p-3" style={{width:"100%"}}>
                     <h3 className='text-center col-lg-6'>Sign IN</h3>
                     <Form>
                     
                         <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
-                            <Form.Control type="email" onChange={getData} name="email" placeholder="Enter Email Address" />                        
+                            <Form.Control type="email" onChange={getData} name="email" placeholder="Email Address" />                        
                         </Form.Group>
                     
                         <Form.Group className="mb-3 col-lg-6" controlId="formBasicPassword">
-                            <Form.Control type="password" onChange={getData} name="password" placeholder="Enter Password" />
+                            <Form.Control type="password" onChange={getData} name="password" placeholder="Password" />
                         </Form.Group>
 
                     

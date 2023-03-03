@@ -1,6 +1,10 @@
 /* navigation bar start */
-
+.header {
+    background: linear-gradient(to right, #7680a7, #93a6ec, #819cff);
+}
 .nav {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,19 +25,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 1 auto;
+    flex: 1 auto;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-item {
-    margin: 0 0.625rem;
+    margin: 0 1.5rem;
 }
 
 .nav-item-text {
     text-decoration: none;
     color: hsl(0, 0%, 0%);
+    font-size: 18px;
 }
 
 .nav-item-text:hover,

@@ -2,10 +2,10 @@ import React from 'react'
 import './css/navigation-bar.css'
 import { Link } from 'react-router-dom';
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <div>
-        <header className="header">
+        <header className="header" style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1 }}>
             <nav className="nav">
                 
                 <div className="logo-container">
@@ -50,15 +50,15 @@ const navbar = () => {
                         </Link>
                     </li>
                    
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="/sign_in" className="nav-item-text">Sign In</Link>
-                    </li>
+                    </li> */}
                 </ul>
 
                 <button type="button"
                         className="cta-button"
                         onclick="window.open('https://cutt.ly/mensahe-form')">
-                        start free
+                        <Link to="/signup" className="nav-item-text">Sign Up</Link>
                 </button>
 
 
@@ -68,4 +68,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
