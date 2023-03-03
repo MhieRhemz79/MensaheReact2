@@ -88,7 +88,7 @@ export default function Sidebar() {
 
         {/* Sidebar Menu */}
         <List>
-          {["Inbox", "Templates", "Send email", "Drafts"].map((text, index) => (
+          {["Inbox", "Templates", "Send email", "Drafts", "Sent email"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
