@@ -1,10 +1,8 @@
 import * as React from "react";
+import './sidebar.css';
 import { useEffect, useState } from "react";
-// import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
-// import Container from 'react-bootstrap/Container';
-// import Navbar from 'react-bootstrap/Navbar';
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,39 +15,44 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import HomeIcon from '@mui/icons-material/Home';
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import ArrowIcon from "@mui/icons-material/ArrowBack";
+import { Drafts } from '@mui/icons-material';
+import { Chat } from "@mui/icons-material/";
+import EmailIcon from "@mui/icons-material/Email";
+import Button from "@mui/material/Button";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
+// import SendIcon from '@mui/icons-material/Send';
+// import SaveIcon from '@mui/icons-material/Save';
+// import CancelIcon from '@mui/icons-material/Cancel';
 
 const drawerWidth = 240;
 
 export default function Sidebar() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [logindata, setLoginData] = useState([]);
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const history = useNavigate();
-
-  const todayDate = new Date().toLocaleDateString();
-
-  const Birthday = () => {
-    const getuser = localStorage.getItem("user_login");
-    if (getuser && getuser.length) {
-      const user = JSON.parse(getuser);
-      setLoginData(user);
-    }
-  };
-
   const userlogout = () => {
     localStorage.removeItem("user_login");
     history("/sign_in");
   };
 
-  // // eslint-disable-next-line react-hooks/rules-of-hooks
-  // useEffect(() => {
-  //   Birthday();
-  // }, []);
+  const [open, setOpen] = useState(false);
+  const [currentTime, setCurrentTime] = useState("");
 
-  // const [open, setOpen] = React.useState(false);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const handleComposeClick = () => {
+    setOpen(!open);
+  };
+  
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -59,11 +62,16 @@ export default function Sidebar() {
         position="fixed"
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
       >
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            DASHBOARD
+        <Toolbar className="dash">
+        <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>
+        DASHBOARD
           </Typography>
+          <Typography variant="subtitle1" noWrap component="div">
+            {currentTime}
+          </Typography>
+
         </Toolbar>
+        
       </AppBar>
 
       <Drawer
@@ -79,52 +87,71 @@ export default function Sidebar() {
         anchor="left"
       >
         <Toolbar />
-
-        <div>
-          <span>Log In as:</span>
-        </div>
-
-        <Divider />
-
-        {/* Sidebar Menu */}
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
+        <Box sx={{ overflow: "auto" }}>
+          <Divider />
+          <List>
+          <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <HomeIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary="Home" />
               </ListItemButton>
             </ListItem>
-          ))}
-        </List>
-        
-        <Divider />
 
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem disablePadding>
+              <ListItemButton onClick={handleComposeClick}>
+                <ListItemIcon>
+                  <Chat />
+                </ListItemIcon>
+                <ListItemText primary="Compose" />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary="Inbox" />
               </ListItemButton>
             </ListItem>
-          ))}
-        </List>
 
-        <List>
-          <ListItemButton onClick={userlogout}>
-            <ListItemIcon>
-              <MailIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sign Out" />
-          </ListItemButton>
-        </List>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Drafts />
+                </ListItemIcon>
+                <ListItemText primary="Drafts" />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <MailIcon />
+                </ListItemIcon>
+                <ListItemText primary="Sent Items" />
+              </ListItemButton>
+            </ListItem>
+
+            <Divider />
+
+            <ListItem disablePadding>
+              <ListItemButton onClick={userlogout}>
+                <ListItemIcon>
+                  <ArrowIcon />
+                </ListItemIcon>
+                <ListItemText primary="Logout" />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </Box>
       </Drawer>
 
+      
+
+      <div className="content-area">
       <Box
         component="main"
         sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}
@@ -132,10 +159,40 @@ export default function Sidebar() {
         <Toolbar />
 
         {/* DASHBOARD */}
-        <Typography paragraph>
+       
+        <Typography paragraph className={open ? "hidden" : ""}>
           <h1>Welcome to MENSAHE!</h1>
         </Typography>
+
+        <Typography paragraph>
+        {open && (
+          <div>
+            <TextareaAutosize
+              aria-label="empty textarea"
+              placeholder="Type here"
+              style={{ width: "100%", marginTop: "10px" }}
+              minRows={10}
+            />
+            <div style={{ display: "flex", justifyContent: "space-between", marginTop: "10px" }}>
+              <Button variant="contained" color="primary" startIcon={<EmailIcon />}>
+                Send
+              </Button>
+              <div>
+                <Button variant="contained" color="success">
+                  Save
+                </Button>
+                <Button variant="contained" color="error" style={{ marginLeft: "10px" }} onClick={handleComposeClick}>
+                  Cancel
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        </Typography>
+        
       </Box>
+      </div>
     </Box>
   );
 }
