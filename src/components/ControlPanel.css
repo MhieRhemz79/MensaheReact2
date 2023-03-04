@@ -1,0 +1,40 @@
+.main-left {
+    width: 10%;
+    height: 95vh;
+    padding: 0;
+    background-color: #58b368;
+}
+
+.main-left-1 {
+    width: 100%;
+    height: 20vh;
+}
+.main-left-2 {
+    
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 25%;
+}
+.main-left-3 {
+    padding-top: 30px;
+    width: 100%;
+    height: 10vh;
+    margin: auto 25%;
+}
+img {
+    height: 60px;
+    margin: auto 25%;
+    padding-top: 40px;
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    background-color: #efeeb4;
+}
+.dashboard {
+    font-size: 11px;
+}

@@ -1,0 +1,18 @@
+#main-top {
+    border: 1px solid black;
+    width: 100%;
+    height: 7vh;
+    background-color: green;
+}
+
+#main-right {
+    margin: 10px;
+    width: 215%;
+}
+
+#dashboard {
+    border: 1px solid black;
+    height: 85vh;
+    margin-top: 10px;
+    background-color: #dad873;
+}
